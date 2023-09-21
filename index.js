@@ -77,7 +77,9 @@ function getUserData1(userId) {
   //Example usage with .then() and .catch()
   getUserData1(1)
     .then((data) => {
-      console.log("User Data:", data);
+      const {userId, name, email} = data
+      console.log(`user data: ${userId} name: ${name} email: ${email}`)
+      //console.log("User Data:", data);
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -110,6 +112,8 @@ function getUserData3(userId) {
   }
   getUserData3(-1)
   .then((data) => {
+    // const {userId, name, email} = data
+    // console.log(`user data: ${userId} name: ${name} email: ${email}`)
     console.log("User Data:", data);
   })
   .catch((error) => {
